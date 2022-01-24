@@ -1,0 +1,362 @@
+* {
+  box-sizing: border-box;
+}
+body {
+  font-family: "Comfortaa", cursive;
+}
+html {
+  scroll-behavior: smooth;
+}
+html,
+body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+ul,
+li {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.wrapper {
+  min-height: 100vh;
+  overflow: hidden;
+  position: relative;
+}
+/*
+.wrapper::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba(5, 19, 100, 0.2);
+}
+*/
+.header {
+  height: 50px;
+  background-color: rgba(255, 0, 0, 0.795);
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  opacity: 0;
+  z-index: 200;
+  transition: all 1s cubic-bezier(0,.27,.71,.97) 0s;
+}
+.header:hover {
+  opacity: 1;
+}
+.nav {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  height: 100%;
+}
+.nav__item {
+  text-decoration: none;
+  color: aliceblue;
+}
+
+.section {
+  height: 100vh;
+}
+.main {
+  background-image: url(img/ccla.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.about {
+  width: 75%;
+  position: relative;
+  z-index: 100;
+  display: flex;
+  margin-bottom: 20px;
+  justify-content: center;
+}
+@keyframes san1a-run {
+  0% {
+    transform: none;
+  }
+  25% {
+    transform: rotate(-20deg);
+  }
+  50% {
+    transform: rotate(0deg);
+  }
+  75% {
+    transform: rotate(20deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+.avatar {
+  height: 250px;
+  width: 250px;
+  overflow: hidden;
+  border-radius: 50%;
+  border: 2px solid white;
+  flex-shrink: 0;
+  margin-right: 20px;
+  background-image: url(img/san1a.jpg);
+  background-position: 80% top;
+  animation: img-run 2s infinite linear;
+}
+
+.avatar_img {
+  width: 100%;
+  
+}
+.about_info {
+  background-color: rgba(43, 9, 236, 0.7);
+  color: white;
+  padding: 20px;
+  border-radius: 20px;
+  border: white 2px solid;
+}
+@keyframes title-run {
+  0% {
+    transform: none;
+    color: white;
+  }
+  100% {
+    transform: translateX(25px);
+    color: rgb(67, 67, 255);
+  }
+}
+.about_title {
+  font-size: 50px;
+  margin: 0;
+  animation: title-run 2s infinite alternate;
+}
+.about_text {
+  font-size: 20px;
+  text-align: center;
+}
+.button {
+  z-index: 100;
+  position: relative;
+  background-color: rgb(205 198 176);
+  color: white;
+  text-transform: uppercase;
+  padding: 15px;
+  border-radius: 10px;
+  transition: all 1s cubic-bezier(0,.27,.71,.97) 0s;
+}
+.button:hover {
+  box-shadow: 0 0 20px 20px rgba(245, 235, 104, 0.9);
+}
+.compliment {
+  background-image: url(img/hotline.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: rgb(255, 255, 255);
+  padding: 20px;
+  background-color: rgba(19, 1, 5, 0.801);
+}
+@keyframes title1-run {
+  0% {
+    transform: none;
+    color: white;
+  }
+  100% {
+    transform: translateY(10px);
+    color: rgb(231, 66, 0);
+  }
+}
+.compliment__title {
+   animation: title1-run 1s infinite alternate;
+}
+.compliment__content {
+  width: 50%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+@keyframes img-run {
+  0% {
+    transform: none;
+  }
+  25% {
+    transform: rotate(-10deg);
+  }
+  50% {
+    transform: rotate(0deg);
+  }
+  75% {
+    transform: rotate(10deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+.compliment__img-wrap {
+  height: 30%;
+  animation: img-run 2s infinite linear;
+}
+
+.compliment__img {
+  height: 100%;
+}
+
+.poem {
+  background-image: url(img2/Christmas-Present-JAyJ-2048x1152-MM-100.jpg);
+  background-size: cover;
+  padding-top: 50px;
+}
+.poem__title {
+  text-align: center;
+}
+.poem__list {
+  display: flex;
+  justify-content: center;
+}
+.poem__element {
+  width: 300px;
+  min-height: 580px;
+  border: 2px solid transparent;
+  border-radius: 5px;
+  background-color: wheat;
+  padding: 20px;
+  margin-right: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: all 1s cubic-bezier(0,.27,.71,.97) 0s;
+}
+.poem__element:hover {
+  transform: scale(1.1);
+  border: 5px solid green;
+  box-shadow: 0 0 20px 20px rgba(9, 255, 1, 0.5);
+}
+.poem__img-wrap {
+  height: 300px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+.poem__img {
+  height: 100%;
+}
+
+.msg {
+  background-image: url(img2/noviy-god100.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: azure;
+}
+.msg__title {
+  margin-bottom: 68px;
+}
+
+.form-msg {
+  width: 600px;
+  background-image: url(img2/noviy-god.jpg);
+  padding: 40px 40px 65px;
+  background-position: right center;
+  background-size: cover;
+  border-radius: 10px;
+  position: relative;
+}
+.form-msg__content {
+  margin: 0 auto;
+  width: 90%;
+}
+
+.form-msg__row{
+  margin-bottom: 10px;
+}
+
+.form-msg__title-input {
+  margin-bottom: 10px;
+  font-size: 20px;
+}
+
+.form-msg__input, .form-msg__message {
+  width: 100%;
+  font-size: 20px;
+  padding: 10px;
+  border-radius: 5px;
+  outline: none;
+  border: none;
+}
+
+.form-msg__message {
+  resize: none;
+  height: 200px;
+}
+ .form-msg__button-wrap {
+  display: flex;
+  justify-content: end;
+  margin-top: 30px;
+ }
+
+
+.form-msg__sumbit {
+  padding: 10px 20px;
+  text-transform: uppercase;
+  font-weight: bold;
+  background-color: #f82137;
+  color: #ffff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer
+
+}
+.form-msg__sumbit:hover{
+  background-color:rgb(155, 13, 13) ;  
+  transition: all 1s cubic-bezier(0,.27,.71,.97) 0s;
+}
+@keyframes img1-run {
+  0% {
+    transform: none;
+  }
+  100% {
+    transform: translateX(-100px);
+  }
+}
+.form-msg__img-wrap {
+  height: 200px;
+  position: absolute;
+  right: 0;
+  top: -157px;
+}
+
+.form-msg__img {
+  height: 100%;
+  animation: img1-run 2s infinite alternate
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
